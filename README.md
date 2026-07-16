@@ -2,6 +2,10 @@
 
 A responsive in-flight movie browser built with React, TypeScript, and Vite. Travelers can search the onboard catalog, filter by genre, sort titles, view movie details, and quickly see whether a movie fits within the remaining flight time.
 
+## Live Demo
+
+[View the live application](https://in-flight-movies.vercel.app/)
+
 ## Features
 
 - Search by movie title, director, or cast member
