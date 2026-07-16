@@ -1,0 +1,120 @@
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+  overflow: hidden;
+  background: var(--card-background);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(142, 227, 195, 0.28);
+}
+
+.movie-card-topline {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 18px 18px 0;
+}
+
+.movie-card-genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.movie-card-genres span,
+.movie-card-fit {
+  padding: 5px 8px;
+  color: var(--chip-text);
+  background: var(--chip-background);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.movie-card-fit {
+  flex: none;
+  color: var(--danger-text);
+  background: var(--danger-background);
+}
+
+.movie-card-fit-available {
+  color: var(--accent);
+  background: var(--fit-background);
+}
+
+.movie-card-content {
+  flex: 1;
+  padding: 34px 22px 22px;
+}
+
+.movie-card-duration {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.movie-card h2 {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(1.35rem, 2vw, 1.75rem);
+  line-height: 1.18;
+}
+
+.movie-card-director {
+  margin: 12px 0 0;
+  color: var(--muted);
+}
+
+.movie-card-details {
+  margin-top: 22px;
+  padding-top: 18px;
+  color: var(--details-text);
+  border-top: 1px solid var(--border);
+  line-height: 1.6;
+}
+
+.movie-card-details p {
+  margin: 0 0 12px;
+}
+
+.movie-card-details strong {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--text-primary);
+}
+
+.movie-card-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 22px;
+  color: var(--text-primary);
+  background: var(--card-footer);
+  border: 0;
+  border-top: 1px solid var(--border);
+  font-weight: 700;
+  text-align: left;
+}
+
+.movie-card-button:hover {
+  color: var(--accent);
+  background: var(--card-footer-hover);
+}
+
+.movie-card-button span {
+  font-size: 1.4rem;
+  font-weight: 400;
+}

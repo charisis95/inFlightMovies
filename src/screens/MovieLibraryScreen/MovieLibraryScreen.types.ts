@@ -1,0 +1,1 @@
+export const FLIGHT_DURATION_MINUTES = 120;

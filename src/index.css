@@ -1,13 +1,100 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
+
+:root,
+:root[data-theme='dark'] {
+  font-family: 'DM Sans', sans-serif;
+  color: #eef4ff;
+  background: #08111f;
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --text-primary: #eef4ff;
+  --page-background:
+    radial-gradient(circle at 15% 5%, rgba(45, 118, 154, 0.26), transparent 34rem),
+    radial-gradient(circle at 90% 30%, rgba(86, 66, 156, 0.18), transparent 32rem),
+    #08111f;
+  --surface: rgba(18, 31, 51, 0.78);
+  --border: rgba(255, 255, 255, 0.1);
+  --muted: #9cacbf;
+  --accent: #8ee3c3;
+  --input-background: rgba(5, 13, 25, 0.7);
+  --placeholder: #6f8197;
+  --menu-background: #15243a;
+  --card-background: linear-gradient(145deg, rgba(26, 43, 68, 0.96), rgba(14, 25, 42, 0.98));
+  --chip-text: #b7c4d4;
+  --chip-background: rgba(255, 255, 255, 0.06);
+  --danger-text: #efb1ad;
+  --danger-background: rgba(152, 54, 54, 0.22);
+  --fit-background: rgba(40, 134, 103, 0.18);
+  --details-text: #c8d2df;
+  --card-footer: rgba(5, 13, 25, 0.36);
+  --card-footer-hover: rgba(5, 13, 25, 0.56);
+  --flight-card-background: #8ee3c3;
+  --flight-card-text: #0d342d;
+  --control-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root[data-theme='light'] {
+  color: #172337;
+  background: #f4f7fb;
+  color-scheme: light;
+  --text-primary: #172337;
+  --page-background:
+    radial-gradient(circle at 15% 5%, rgba(64, 158, 137, 0.14), transparent 34rem),
+    radial-gradient(circle at 90% 30%, rgba(108, 91, 180, 0.1), transparent 32rem),
+    #f4f7fb;
+  --surface: rgba(255, 255, 255, 0.82);
+  --border: rgba(23, 35, 55, 0.13);
+  --muted: #65748a;
+  --accent: #08775e;
+  --input-background: #ffffff;
+  --placeholder: #8995a5;
+  --menu-background: #ffffff;
+  --card-background: linear-gradient(145deg, #ffffff, #f8fafc);
+  --chip-text: #53657c;
+  --chip-background: #edf2f7;
+  --danger-text: #a63c47;
+  --danger-background: #fdecef;
+  --fit-background: #e2f6ef;
+  --details-text: #44566c;
+  --card-footer: #f7f9fc;
+  --card-footer-hover: #edf3f6;
+  --flight-card-background: #0f7a61;
+  --flight-card-text: #ffffff;
+  --control-shadow: 0 10px 30px rgba(30, 48, 72, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: var(--page-background);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--page-background);
+  transition: color 180ms ease, background 180ms ease;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button,
+select {
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(52, 154, 125, 0.35);
+  outline-offset: 2px;
 }
